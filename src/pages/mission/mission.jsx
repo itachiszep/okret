@@ -40,10 +40,11 @@ export default function Home() {
             >
               <iframe 
                 className="w-full h-full"
-                src={`https://www.youtube.com/embed/${videoId}?controls=1&modestbranding=0&iv_load_policy=3`}
+                src={`https://www.youtube.com/embed/${videoId}?controls=1&modestbranding=1&fs=1&iv_load_policy=3&rel=0&showinfo=0&cc_load_policy=0`}
                 title={`YouTube video ${index + 1}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
               ></iframe>
             </div>
           ))}
