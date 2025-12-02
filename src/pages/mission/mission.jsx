@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 export default function Home() {
+  
   const videos = [
+    "6_uvpReICDU"
     "juNZV3AVlpk",
     "elmJQTKLC6c",
     "46FPF6pCtY8",
