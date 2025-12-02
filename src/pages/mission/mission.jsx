@@ -1,8 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-
 export default function Home() {
   const videos = [
+    "46FPF6pCtY8",
+    "_KmsNRHVudk",
+    "kt04TZi72P0",
+    "YkIFDQxtos8",
     "ax8ffdMFsKs",
     "E0MHHWCC1j4",
     "hO7Sf1vc4R4",
@@ -15,7 +18,6 @@ export default function Home() {
     "pLnGByBsFqE",  
     "BsblgcBB17A",    
     "y4-in1XbVEc",     
-    "kt04TZi72P0",     
     "0X-bcrwmEBc",     
     "h3Nqbx7mbAo",     
     "1eiFc8g1VXI",    
@@ -27,7 +29,6 @@ export default function Home() {
     "82InbtYxdJY",
     "HWmqLXP1-o0"
   ];
-
   return (
     <div className="bg-black text-white box-border m-0 p-0">
       <div className="w-full bg-black flex flex-col items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-10 lg:py-12 pt-20 md:pt-24 text-center">
