@@ -1,8 +1,9 @@
 import React from "react";
 
 
+export default function CzasyAngielskie() {
 
- export default function CzasyAngielskie() {
+
 const verbs = [
 { base: "hear", past: "heard", pp: "heard", pl: "słyszeć" },
 { base: "hide", past: "hid", pp: "hidden", pl: "chować" },
@@ -86,8 +87,11 @@ const verbs = [
 { base: "withdraw", past: "withdrew", pp: "withdrawn", pl: "wycofać" },
 { base: "withstand", past: "withstood", pp: "withstood", pl: "wytrzymywać" },
 { base: "write", past: "wrote", pp: "written", pl: "pisać" }
-  
+ ]
   return (
+
+
+   
     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-8 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <div className="bg-white shadow-2xl rounded-2xl overflow-hidden mb-8">
