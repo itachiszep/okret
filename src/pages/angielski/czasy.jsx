@@ -3,6 +3,90 @@ import React from "react";
 
 
  export default function CzasyAngielskie() {
+const verbs = [
+{ base: "hear", past: "heard", pp: "heard", pl: "słyszeć" },
+{ base: "hide", past: "hid", pp: "hidden", pl: "chować" },
+{ base: "hit", past: "hit", pp: "hit", pl: "uderzać" },
+{ base: "hold", past: "held", pp: "held", pl: "trzymać" },
+{ base: "hurt", past: "hurt", pp: "hurt", pl: "ranić" },
+{ base: "keep", past: "kept", pp: "kept", pl: "trzymać" },
+{ base: "know", past: "knew", pp: "known", pl: "wiedzieć" },
+{ base: "lay", past: "laid", pp: "laid", pl: "kłaść" },
+{ base: "lead", past: "led", pp: "led", pl: "prowadzić" },
+{ base: "lean", past: "leant/leaned", pp: "leant/leaned", pl: "pochylać się" },
+{ base: "leap", past: "leapt/leaped", pp: "leapt/leaped", pl: "skakać" },
+{ base: "learn", past: "learnt/learned", pp: "learnt/learned", pl: "uczyć się" },
+{ base: "leave", past: "left", pp: "left", pl: "opuszczać" },
+{ base: "lend", past: "lent", pp: "lent", pl: "pożyczać" },
+{ base: "let", past: "let", pp: "let", pl: "pozwalać" },
+{ base: "lie", past: "lay", pp: "lain", pl: "leżeć" },
+{ base: "light", past: "lit/lighted", pp: "lit/lighted", pl: "zapalać" },
+{ base: "lose", past: "lost", pp: "lost", pl: "tracić" },
+{ base: "make", past: "made", pp: "made", pl: "robić" },
+{ base: "mean", past: "meant", pp: "meant", pl: "znaczyć" },
+{ base: "meet", past: "met", pp: "met", pl: "spotykać" },
+{ base: "mistake", past: "mistook", pp: "mistaken", pl: "mylić" },
+{ base: "pay", past: "paid", pp: "paid", pl: "płacić" },
+{ base: "prove", past: "proved", pp: "proven/proved", pl: "udowadniać" },
+{ base: "put", past: "put", pp: "put", pl: "kłaść" },
+{ base: "read", past: "read", pp: "read", pl: "czytać" },
+{ base: "ride", past: "rode", pp: "ridden", pl: "jeździć" },
+{ base: "ring", past: "rang", pp: "rung", pl: "dzwonić" },
+{ base: "rise", past: "rose", pp: "risen", pl: "wzrastać" },
+{ base: "run", past: "ran", pp: "run", pl: "biegać" },
+{ base: "say", past: "said", pp: "said", pl: "mówić" },
+{ base: "see", past: "saw", pp: "seen", pl: "widzieć" },
+{ base: "sell", past: "sold", pp: "sold", pl: "sprzedawać" },
+{ base: "send", past: "sent", pp: "sent", pl: "wysyłać" },
+{ base: "set", past: "set", pp: "set", pl: "ustawiać" },
+{ base: "shake", past: "shook", pp: "shaken", pl: "trząść" },
+{ base: "shine", past: "shone", pp: "shone", pl: "świecić" },
+{ base: "shoot", past: "shot", pp: "shot", pl: "strzelać" },
+{ base: "show", past: "showed", pp: "shown/showed", pl: "pokazywać" },
+{ base: "shrink", past: "shrank", pp: "shrunk", pl: "kurczyć się" },
+{ base: "shut", past: "shut", pp: "shut", pl: "zamykać" },
+{ base: "sing", past: "sang", pp: "sung", pl: "śpiewać" },
+{ base: "sink", past: "sank", pp: "sunk", pl: "tonąć" },
+{ base: "sit", past: "sat", pp: "sat", pl: "siedzieć" },
+{ base: "sleep", past: "slept", pp: "slept", pl: "spać" },
+{ base: "slide", past: "slid", pp: "slid", pl: "ślizgać się" },
+{ base: "speak", past: "spoke", pp: "spoken", pl: "mówić" },
+{ base: "spend", past: "spent", pp: "spent", pl: "wydawać" },
+{ base: "spill", past: "spilt/spilled", pp: "spilt/spilled", pl: "rozlewać" },
+{ base: "spin", past: "span/spun", pp: "spun", pl: "kręcić" },
+{ base: "spit", past: "spat", pp: "spat", pl: "pluć" },
+{ base: "split", past: "split", pp: "split", pl: "dzielić" },
+{ base: "spoil", past: "spoilt/spoiled", pp: "spoilt/spoiled", pl: "psuć" },
+{ base: "spread", past: "spread", pp: "spread", pl: "rozprzestrzeniać" },
+{ base: "spring", past: "sprang", pp: "sprung", pl: "skakać, odbijać się" },
+{ base: "stand", past: "stood", pp: "stood", pl: "stać" },
+{ base: "steal", past: "stole", pp: "stolen", pl: "kraść" },
+{ base: "stick", past: "stuck", pp: "stuck", pl: "przyklejać" },
+{ base: "sting", past: "stung", pp: "stung", pl: "użądlić" },
+{ base: "stink", past: "stank", pp: "stunk", pl: "śmierdzieć" },
+{ base: "strike", past: "struck", pp: "struck", pl: "uderzać" },
+{ base: "swear", past: "swore", pp: "sworn", pl: "przysięgać" },
+{ base: "sweep", past: "swept", pp: "swept", pl: "zamiatać" },
+{ base: "swell", past: "swelled", pp: "swollen/swelled", pl: "puchnąć" },
+{ base: "swim", past: "swam", pp: "swum", pl: "pływać" },
+{ base: "swing", past: "swung", pp: "swung", pl: "huśtać" },
+{ base: "take", past: "took", pp: "taken", pl: "brać" },
+{ base: "teach", past: "taught", pp: "taught", pl: "uczyć" },
+{ base: "tear", past: "tore", pp: "torn", pl: "drzeć" },
+{ base: "tell", past: "told", pp: "told", pl: "mówić" },
+{ base: "think", past: "thought", pp: "thought", pl: "myśleć" },
+{ base: "throw", past: "threw", pp: "thrown", pl: "rzucać" },
+{ base: "understand", past: "understood", pp: "understood", pl: "rozumieć" },
+{ base: "upset", past: "upset", pp: "upset", pl: "denerwować" },
+{ base: "wake", past: "woke", pp: "woken", pl: "budzić" },
+{ base: "wear", past: "wore", pp: "worn", pl: "nosić" },
+{ base: "weep", past: "wept", pp: "wept", pl: "płakać" },
+{ base: "win", past: "won", pp: "won", pl: "wygrywać" },
+{ base: "wind", past: "wound", pp: "wound", pl: "nawijać" },
+{ base: "withdraw", past: "withdrew", pp: "withdrawn", pl: "wycofać" },
+{ base: "withstand", past: "withstood", pp: "withstood", pl: "wytrzymywać" },
+{ base: "write", past: "wrote", pp: "written", pl: "pisać" }
+  
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-4 sm:p-8 min-h-screen">
       <div className="max-w-6xl mx-auto">
@@ -595,6 +679,19 @@ import React from "react";
           <p className="text-sm text-gray-500">📖 Wszystkie zdania używają tego samego kontekstu (going to school) dla łatwiejszego zapamiętania</p>
         </div>
       </div>
+     <div className="p-6 max-w-4xl mx-auto">
+<h1 className="text-3xl font-bold mb-6 text-center">Czasowniki nieregularne</h1>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+{verbs.map((v, i) => (
+<div key={i} className="p-4 rounded-2xl shadow bg-white">
+<p className="font-bold text-lg">{v.base}</p>
+<p>{v.past}</p>
+<p>{v.pp}</p>
+<p className="text-sm text-gray-600 mt-1">{v.pl}</p>
+</div>
+))}
+</div>
+</div>
     </div>
   );
 }
