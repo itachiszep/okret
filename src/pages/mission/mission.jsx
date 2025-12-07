@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+
 export default function Home() {
   
   const videos = [
@@ -35,11 +36,21 @@ export default function Home() {
     "JzVt7CznI9k",
     "HWmqLXP1-o0"
   ];
+
   return (
     <div className="bg-black text-white box-border m-0 p-0">
       <div className="w-full bg-black flex flex-col items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-10 lg:py-12 pt-20 md:pt-24 text-center">
         {/* Iframy jedno pod drugim */}
         <div className="w-full flex flex-col items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl">
+          
+          {/* Twoje video na górze */}
+          <div className="w-full aspect-video rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <video controls className="w-full h-full">
+              <source src="video.webm" type="video/webm" />
+            </video>
+          </div>
+
+          {/* YouTube videos */}
           {videos.map((videoId, index) => (
             <div 
               key={index}
